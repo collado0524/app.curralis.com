@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "app.curralis.com": "apps/app.curralis.com",
+    "app.curralis.com-e2e": "apps/app.curralis.com-e2e"
+  }
+}

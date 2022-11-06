@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/app.curralis.com",
         "index": "apps/app.curralis.com/src/index.html",
@@ -15,18 +17,28 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/app.curralis.com/src/favicon.ico",
-          "apps/app.curralis.com/src/assets"
+          "apps/app.curralis.com/src/assets",
+          "apps/app.curralis.com/src/manifest.webmanifest"
         ],
-        "styles": ["apps/app.curralis.com/src/styles.scss"],
-        "scripts": []
+        "styles": [          
+          "node_modules/bootstrap/scss/bootstrap.scss",
+          "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+          "apps/app.curralis.com/src/custom-theme.scss",
+          "apps/app.curralis.com/src/styles.scss"
+        ],       
+        "scripts": [
+          "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+        ],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/app.curralis.com/ngsw-config.json"
       },
       "configurations": {
         "production": {
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "3mb",
+              "maximumError": "5mb"
             },
             {
               "type": "anyComponentStyle",
@@ -82,7 +94,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/app.curralis.com"],
+      "outputs": [
+        "coverage/apps/app.curralis.com"
+      ],
       "options": {
         "jestConfig": "apps/app.curralis.com/jest.config.ts",
         "passWithNoTests": true

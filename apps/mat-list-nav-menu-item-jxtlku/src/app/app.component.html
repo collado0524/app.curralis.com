@@ -1,0 +1,244 @@
+<div [class.app-dark-theme]="true">
+	<mat-sidenav-container fullscreen class="sidenav-container">
+		<mat-sidenav #sidenav mode="over" class="app-sidenav">
+			<mat-toolbar color="primary">
+				<div name="toolbar-title" class="navbar-text">
+					Websites
+				</div>
+				<span class="app-toolbar-filler"></span>
+				<mat-icon (click)="sidenav.toggle()" class="close-sidenav" color="red">
+					close
+				</mat-icon>
+			</mat-toolbar>
+
+			<button mat-raised-button color="accent" (click)="navigateToGithub()" class="sidenav-navigation-button">
+				Github
+			</button>
+			<br>
+
+			<button mat-raised-button color="accent" (click)="navigateToLinkedin()" class="sidenav-navigation-button">
+				LinkedIn
+			</button>
+			<br>
+
+			<button mat-raised-button color="accent" (click)="nagivateToResume()" class="sidenav-navigation-button">
+				Resume
+			</button>
+			<br>
+
+			<button mat-raised-button color="accent" (click)="navigateToSoundcloud()" class="sidenav-navigation-button">
+				Soundcloud
+			</button>
+		</mat-sidenav>
+		
+		<mat-toolbar color="primary" class="main-toolbar">
+			<button mat-button (click)="sidenav.toggle()">
+				<mat-icon>menu</mat-icon>
+			</button> 
+			<div class="navbar-text">
+				Daniel Turcich
+			</div>
+		</mat-toolbar>
+
+		<!-- Where the main pages  -->
+		<mat-tab-group>
+			<mat-tab label="Home">
+				<div class="app-content">
+					<mat-card>
+						Welcome to my website [UNDER CONSTRUCTION]. Use the sidemenu to navigate to some of my profiles and the tabs to see the pages of the site.
+					</mat-card>
+				</div>
+			</mat-tab>
+
+			<mat-tab label="About">
+				<div class="app-content">
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Bio
+						</mat-card-title>
+						<div class="text-body-no-sections">	
+							I'm Daniel James Turcich a Student at Montclair State University with a major in Computer Science. I am seeking to work as
+							a Software Engineer/ Developer in New York City after I Graduate in May 2018. I'm very keen on learning and trying new technologies
+							and working on interesting projects. 
+						</div>
+					</mat-card>
+
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Education
+						</mat-card-title>
+
+						<div class="text-header">
+							Montclair State University
+						</div>
+						<div class="text-body">	
+							Fourth year student at Montclair State University expected to graduate in May 2018, 
+							started going to school in Fall of 2014. Majoring in Computer Science and took Physics as my science collateral.
+						</div>
+						<br>
+
+						<div class="text-header">
+							Burlington County College
+						</div>
+						<div class="text-body">	
+							Took American Cinema at my High School which counted as 3 credits from Burlington County College which I transferred
+							when I got accepted to Montclair State University.
+						</div>
+					</mat-card>
+
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Skills
+						</mat-card-title>
+						
+						<div class="text-header">
+							Technical
+						</div>
+						<div class="text-body">
+							Advanced - C#, Java, Python, Git, JavaScript, TypeScript, Angular, Angular Material<br><br>
+							Medium - HTML, CSS, SQL Server, Database Design<br><br>
+							Beginner - XML, Android, LUA, MySQL, C++<br><br>
+						</div>
+
+						<div class="text-header">
+							General
+						</div>
+						<div class="text-body">	
+							Leadership, Management, Public Speaking, Event Planning, Team Building, Customer Service <br><br>
+						</div>
+						
+						<div class="text-header">
+							Creative
+						</div>
+						<div class="text-body">	
+							Game Development, Music Production, Basic Video Editing, Basic Photo Editing <br><br>
+						</div>
+					</mat-card>
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Work Experience
+						</mat-card-title>
+						<div class="text-header">
+							Advanced Systems Concepts, Inc. (2017)
+						</div>
+						<div class="text-body">
+							Software Engineering Intern - 
+							Worked on an Internal Web application using Angular 4 w/ Material 2, C#, and SQL Server. 
+							Development was done in a Scrum team of 5 people using Visual Studio. <br> <br>
+						</div>
+						
+						<div class="text-header">
+							Montclair State University (2016)
+						</div>
+						<div class="text-body">
+							Subject Matter Expert - 
+							Taught 3 sections of Java with Greenfoot and Co-taught a section of App Development in Javascript with another SME.
+						</div>
+					</mat-card>
+
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Organizations
+						</mat-card-title>
+
+						<div class="text-header">
+							Computer Club<br>
+						</div>
+						<div class="text-body">	
+							Member of my Universities Computer Club (CS/ IT club) every year since starting and am currently the club President. <br><br>
+							Leadership Positions: President, Project Lead, Project Manager, Treasurer
+						</div>
+						<br>
+
+						<div class="text-header">
+							Order of the Arrow <br>
+						</div>
+						<div class="text-body">	
+							Ordeal - September 2011 <br><br>
+							Brotherhood - September 2012 <br><br>
+							Leadership Positions: Cubreach Chairman, Registration Chairman for 2012 Conclave, Membership Chairman, 
+							Vice Chief of Membership, Dance Chairman, Lodge Ball Chairman, NOAC 2015 Chairman <br><br>
+							Awards: <a class="link-text" target="_blank" href="http://www.angelfire.com/alt/hunnikick76/awards/james.html">James Service Award</a>, 
+							<a class="link-text" target="_blank" href="https://oa-bsa.org/pages/content/arrowman-service-award">Arrowman Service Award</a> 
+						</div>
+						<br>
+
+						<div class="text-header">
+							Boy Scouts <br>
+						</div>
+						<div class="text-body">	
+							Eagle Scout - March 14th, 2014 <br><br>
+							Leadership Positions: Senior Patrol Leader, Quartermaster, Order of the Arrow Troop Representative,
+							Patrol Leader, Assistant Patrol Leader, Historian, Librarian
+						</div>
+						<br>
+
+						<div class="text-header">
+							Stage Crew <br>
+						</div>
+						<div class="text-body">
+							Was a part of my High Schools Theater program all four years as a member of Stage Crew, mainly Spotlight and Front of House Sound.
+						</div>
+						<br>
+
+						<div class="text-header">
+							Marching Band <br>
+						</div>
+						<div class="text-body">	
+							Part of my High Schools Marching Band all four years. Two years on Drumline and two years in Pit Percussion. Pit Percussion Captain Senior Year.
+						</div>
+						<br>
+
+						<div class="text-header">
+							Model Congress <br>
+						</div>
+						<div class="text-body">	
+							Part of my High Schools Model Congress club all four years. Wrote and debated multiple bills and was a Committee Chairman one year for the State Conference.   
+						</div>
+						<br>
+						
+						<div class="text-header">
+							Future Business Leaders of America <br>
+						</div>
+						<div class="text-body">	
+							Part of my High Schools FBLA Club all four years. Competed at four Regional events and twice at the state level.
+						</div>
+					</mat-card>
+
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Interests
+						</mat-card-title>
+						<div class="text-body-no-sections">	
+							Advocate and supporter of the Monero Cryptocurrency and Kovri project<br><br>
+							Cryptocurrency trading and technologies<br><br>
+							Speedrunning Videogames<br><br>
+							Video Games/ Video Game Development<br><br>
+							Music/ Music Production/ Music Radio hosting<br><br>
+						</div>
+					</mat-card>
+				</div>
+			</mat-tab>
+
+			<mat-tab label="Contact">
+				<div class="app-content">
+					<mat-card>
+						Current Email: radd86@gmail.com 
+					</mat-card>
+				</div>
+			</mat-tab>
+
+			<mat-tab label="Licenses">
+				<div class="app-content">
+					<mat-card>
+						<mat-card-title class="about-card-title">
+							Open Source Licenses
+						</mat-card-title>
+
+						<div class="licenses-text" [innerText]="license"></div>
+					</mat-card>
+				</div>
+			</mat-tab>
+		</mat-tab-group>
+	</mat-sidenav-container>
+</div>

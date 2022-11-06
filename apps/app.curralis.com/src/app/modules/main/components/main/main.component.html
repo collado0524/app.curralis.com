@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"  fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false"
+      style="padding:0px">
+    <div color="primary" style="padding: 15px 0 0 15px; display:block">
+      <span style="font-size:24px; letter-spacing:5px; "><b>Curralis</b></span><br>
+      <span style="font-size:12px; letter-spacing:3px; " >Creative Solution</span>
+    </div>
+    
+    
+    <mat-nav-list style="font-size:12px; margin: 50px 0 0 0;">
+      <mat-divider></mat-divider>
+      <a mat-list-item *ngFor="let item of menuItems" style="font-size:13px;" [routerLink]="item.link">
+        <mat-icon>{{item.icon}}</mat-icon>
+        <span class="ml-2" style="display: block; padding: 0 0 0 20px">{{item.label}}</span>
+      </a>
+      <mat-divider></mat-divider>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="navbar fixed-top d-flex justify-content-between">
+          <div>          
+            <button
+              type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()"
+              *ngIf="isHandset$ | async"
+              class="toolbaritem">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>            
+          </div> 
+          <div>            
+            <button mat-stroked-button class="pt-1" color="primary" routerLink="auth/login">
+              <span>START SESSION</span>
+            </button>      
+            <mat-slide-toggle style="padding: 0 0 0 15px ;" [formControl]="toggleControl" [click]="changeTheme()">
+              <!--mat-icon *ngIf="toggleControl.value">brightness_5</mat-icon>      
+                <mat-icon *ngIf="!toggleControl.value">bedtime</mat-icon-->
+            </mat-slide-toggle> 
+          </div> 
+    </mat-toolbar>
+        <div class="content" style="margin-top: 50px;">
+          <router-outlet></router-outlet>
+        </div>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

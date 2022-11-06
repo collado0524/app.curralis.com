@@ -67,7 +67,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
       pre {
         background-color: rgba(55, 65, 81, 1);
         border-radius: 0.25rem;
-        color: rgba(229, 231, 235, 1);
+        color: inherit;//rgba(229, 231, 235, 1);
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
           'Liberation Mono', 'Courier New', monospace;
         overflow: scroll;
@@ -92,7 +92,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         padding-bottom: 3rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        color: rgba(55, 65, 81, 1);
+        color: inherit;//rgba(55, 65, 81, 1);
         width: 100%;
       }
       #welcome {
@@ -433,7 +433,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome app.curralis.com 👋
+            Welcome to Curralis 👋
           </h1>
         </div>
 

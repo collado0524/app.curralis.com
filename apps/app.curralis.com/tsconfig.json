@@ -14,7 +14,7 @@
     }
   ],
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es2018",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -27,5 +27,10 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "allowedCommonJsDependencies": [
+    "ngx-masonry",
+    "masonry-layout"
+  ],
+
 }

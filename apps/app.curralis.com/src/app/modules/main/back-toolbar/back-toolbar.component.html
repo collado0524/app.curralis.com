@@ -1,0 +1,6 @@
+<mat-toolbar class="header py-0 bg-white">
+    <button *ngIf="enableBackButton" mat-icon-button class="mx-0 px-0 min-button-with" (click)="location.back()">
+      <mat-icon class="pointer text-center m-0 p-0">keyboard_arrow_left</mat-icon>
+    </button>
+    <ng-content></ng-content>
+</mat-toolbar>

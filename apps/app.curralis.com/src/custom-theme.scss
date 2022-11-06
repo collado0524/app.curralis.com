@@ -1,0 +1,82 @@
+@import '@angular/material/theming';
+
+@include mat-core();
+
+
+$curralis-light-primary: mat-palette($mat-blue, 600);
+$curralis-light-accent:  mat-palette($mat-blue, 800);
+$curralis-light-warn:    mat-palette($mat-red, 500);
+
+$curralis-dark-primary: mat-palette($mat-blue, 600);
+$curralis-dark-accent:  mat-palette($mat-blue, 800);
+$curralis-dark-warn:    mat-palette($mat-red, A400);
+
+$curralis-light-theme: mat-light-theme($curralis-light-primary, $curralis-light-accent, $curralis-light-warn);
+$curralis-dark-theme: mat-dark-theme($curralis-dark-primary, $curralis-dark-accent, $curralis-dark-warn);
+
+.light-theme{
+    @include angular-material-theme($curralis-light-theme);
+    background: #fff;
+    color:#222;
+    .mat-toolbar, .mat-sidenav{
+        background-color: #eee;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-button{
+        width:8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track{
+        background: #eee;
+        border: thin solid #eee;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #ddd;
+        border: thin solid #eee;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background: #bbb;
+    }
+    .box{
+        background-color: #eee;
+        color: #222;
+    }
+}
+
+.dark-theme{
+    @include angular-material-theme($curralis-dark-theme);
+    background: #0a0a14;
+    color:#fff;
+    .mat-toolbar, .mat-sidenav{
+        background-color: #333;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-button{
+        width:8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track{
+        background: #333;
+        border: thin solid #333;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #444;
+        border: thin solid #444;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background: #555;
+    }
+    .box{
+        background-color: #333;
+        color: #fff;
+
+    }
+}

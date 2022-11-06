@@ -1,0 +1,26 @@
+<div class="mb-5 pb-2 pt-1 px-1 min-content">	
+  <ngx-masonry [options]="masonryOptions" [ordered]="true" class="row mx-auto m-0 p-0 mb-2">
+    <div ngxMasonryItem  *ngFor="let post of posts.data;index as idx;" class="p-1 col-lg-3 col-md-3 col-sm-6 col-6">      
+            <a [routerLink]="'/page/'+post.attributes.page.data.attributes.slug">
+              <img src="https://api.curralis.com{{post.attributes.image.data.attributes.formats['small'].url}}" width="100%">                  
+            </a>
+            <!--img src="https://api.curralis.com{{post.attributes.assets.data[1].attributes.formats['small'].url}}" width="100%"-->                                        
+    </div>
+  </ngx-masonry>
+  <div class="row mx-0 my-2 mt-5">
+    <div class="d-grid gap-2 col-lg-6 col-md-12 mx-auto"> 
+      <button type="button" mat-button class=" w-100 border" (click)="showMorePost()">
+        Mostar más<mat-icon class="pointer mx-1">expand_more</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<!--div *ngFor="let post of posts.data">
+  <ul>
+    <li>{{post.attributes.title}}</li>
+    <li>{{post.attributes.subtitle}}</li>
+    <li>{{post.attributes.description}}</li>
+    <li>{{post.attributes.image.data.attributes.formats['medium'].url}}</li>  </ul>
+  
+  
+</div-->

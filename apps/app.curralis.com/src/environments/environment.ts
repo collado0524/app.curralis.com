@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.curralis.com/api/',
-  apiUploads:'https://api.curralis.com'
+  apiUrl: 'https://api.curralis.com/',
 };
 
 /*

@@ -14,7 +14,7 @@ export class PostService {
   ) { }
 
   getPosts() {
-    return this.http.get(environment.apiUrl+"posts?populate=*");
+    return this.http.get(environment.apiUrl+"api/posts?populate=*");
   }
   getPostById() {}
   createPosts() {}

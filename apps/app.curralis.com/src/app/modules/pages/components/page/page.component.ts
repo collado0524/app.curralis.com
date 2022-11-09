@@ -17,7 +17,6 @@ interface Page {
 })
 export class PageComponent implements OnInit {
   apiUrl = environment.apiUrl;
-  apiUploads = environment.apiUploads;  
   slug: string;
   page: Page;
   temp: any;
@@ -43,7 +42,7 @@ export class PageComponent implements OnInit {
             title: this.temp.data[0].attributes.title,
             subtitle: this.temp.data[0].attributes.subtitle,
             description: this.temp.data[0].attributes.description,
-            banner: this.apiUploads+this.temp.data[0].attributes.banner.data.attributes.url
+            banner: this.apiUrl+this.temp.data[0].attributes.banner.data.attributes.url
           };          
           console.log(this.page);
         })

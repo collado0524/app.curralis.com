@@ -12,9 +12,9 @@ export class PagesService {
 
   ) { }
   getPageById(id:string){
-    return this.http.get(`${environment.apiUrl}pages/${id}?populate=*`);
+    return this.http.get(`${environment.apiUrl}api/pages/${id}?populate=*`);
   }
   getPageBySlug(slug:string){
-    return this.http.get(`${environment.apiUrl}pages?filters[slug][$eq]=${slug}&populate=*`);
+    return this.http.get(`${environment.apiUrl}api/pages?filters[slug][$eq]=${slug}&populate=*`);
   }
 }

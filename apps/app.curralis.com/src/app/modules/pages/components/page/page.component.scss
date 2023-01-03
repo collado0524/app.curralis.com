@@ -1,0 +1,33 @@
+.banner {
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner {
+    position: relative;
+  }
+
+  .banner h1 {
+    font-size: 3em;
+  }
+  .banner h4 {
+    font-size: 1.5em;
+  }
+  .banner div {
+    position: absolute;
+    top: 0;    
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    margin:0 auto;
+    margin-top: 35px;
+  }

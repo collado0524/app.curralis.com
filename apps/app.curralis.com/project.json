@@ -21,9 +21,9 @@
           "apps/app.curralis.com/src/manifest.webmanifest"
         ],
         "styles": [          
+          "apps/app.curralis.com/src/custom-theme.scss",
           "node_modules/bootstrap/scss/bootstrap.scss",
           "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-          "apps/app.curralis.com/src/custom-theme.scss",
           "apps/app.curralis.com/src/styles.scss"
         ],       
         "scripts": [

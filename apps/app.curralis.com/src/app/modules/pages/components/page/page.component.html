@@ -7,13 +7,14 @@
     <h4>{{page.subtitle}}</h4>
   </div>
 </header>
-
-  <curralis-post></curralis-post>
-
-
-{{page.description}}
+<div class="row">
+  <div class="col-sm-12">
+    {{page.description}}
+  </div>
+  <div class="col-sm-12">
+    <curralis-post></curralis-post>
+  </div>
 </div>
-
 <ng-template #spinner>
   Please friend, login.
 </ng-template>

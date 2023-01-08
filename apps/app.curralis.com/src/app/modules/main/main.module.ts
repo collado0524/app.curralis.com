@@ -11,6 +11,7 @@ import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { AdsWallComponent } from './components/ads-wall/ads-wall.component';
 import { PageComponent } from '../pages/components/page/page.component';
 import { PostComponent } from '../posts/components/post/post.component';
+import { PostsModule } from '../posts/posts.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PostComponent } from '../posts/components/post/post.component';
     MainRoutingModule,
     MaterialModule,
     NgxMasonryModule,   
+    PostsModule
   ],
   providers: [],
   bootstrap: [],
